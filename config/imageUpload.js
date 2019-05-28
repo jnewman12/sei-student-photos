@@ -3,7 +3,6 @@ var express = require('express')
 var multer = require('multer')
 var multerS3 = require('multer-s3')
 
-// var app = express()
 var s3 = new aws.S3({ 
   "accessKeyId": process.env.AWSAccessKeyId, 
   "secretAccessKey": process.env.AWSSecretKey, 

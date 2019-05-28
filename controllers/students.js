@@ -1,5 +1,4 @@
 const Student = require('../models/student');
-// var imageService = require('../config/imageService');
 
 module.exports = {
   index,
