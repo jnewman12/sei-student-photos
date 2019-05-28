@@ -6,7 +6,6 @@ module.exports = {
   addFact,
   delFact,
   upload,
-  // imageUpload,
   profileImages
 };
 
