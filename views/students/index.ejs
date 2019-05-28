@@ -98,6 +98,11 @@
                 </div>
               <% } %>
             </div>
+            <% if (student.profileImages.length) { %>
+              <a href="/student/<%= student._id %>/images">View Images</a>
+            <% } else { %>  
+              <a href="/upload">Add Image</a>
+            <% } %>  
           </div>
         <% }) %>
       </div>

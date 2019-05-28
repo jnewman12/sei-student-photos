@@ -14,7 +14,8 @@ var studentSchema = new mongoose.Schema({
   cohort: String,
   avatar: String,
   facts: [factSchema],
-  googleId: String
+  googleId: String,
+  profileImages: [String]
 }, {
   timestamps: true
 });
