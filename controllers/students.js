@@ -1,10 +1,16 @@
 const Student = require('../models/student');
+// var imageService = require('../config/imageService');
 
 module.exports = {
   index,
   addFact,
-  delFact
+  delFact,
+  upload,
+  // imageUpload,
+  profileImages
 };
+
+
 
 function index(req, res, next) {
   console.log(req.query)
@@ -41,3 +47,15 @@ function delFact(req, res, next) {
     });
   });
 }
+
+// get
+function upload(req, res, next) {
+  res.render('students/upload', {user: req.user})
+}
+
+function profileImages(req, res, next) {
+  Student.findById(req.params.id, function( err, student) { 
+    res.render('students/images', { user: student });
+  });
+}
+
