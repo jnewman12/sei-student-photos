@@ -8,8 +8,6 @@ module.exports = {
   profileImages
 };
 
-
-
 function index(req, res, next) {
   console.log(req.query)
   // Make the query object to use with Student.find based up
@@ -46,9 +44,8 @@ function delFact(req, res, next) {
   });
 }
 
-// get
 function upload(req, res, next) {
-  res.render('students/upload', {user: req.user})
+  res.render('students/upload', { user: req.user })
 }
 
 function profileImages(req, res, next) {
